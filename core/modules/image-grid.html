@@ -1,0 +1,33 @@
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div id="navbar" class="navbar-collapse">
+                <div class="nav navbar-nav navbar-right">
+                    <button type="button" class="btn btn-xs" ng-click="changeWidth('Small')">
+                        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>Small
+                    </button>
+                    <button type="button" class="btn btn-xs" ng-click="changeWidth('Middle')">
+                        <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>Middle
+                    </button>
+                    <button type="button" class="btn btn-xs" ng-click="changeWidth('FitWidth')">
+                        <span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span>Fit Width
+                    </button>
+                    <button type="button" class="btn btn-xs" ng-click="changeWidth('100%')">
+                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>100%
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="img-container">
+        <div class="row">
+            <div id="imgbox-{{$index}}" class="imgbox" ng-repeat="img in images" ng-style="boxStyle" ng-if="img.visible" ng-class="{'imgbox-focus': img == currentImage}"
+                 ng-mouseenter="moveTo(img, $index)">
+                <div>
+                    <img ng-src="{{img.url}}" ng-style="img.imgStyle">
+                    <div class="caption" >
+                        <p ng-show="settings.showCaption">{{img.fileName}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Image Picker 2",
+  "description": "Choose (filter) images and save images from web page to local disk.",
+  "version": "2.0.0",
+
+  "browser_action": {
+    "default_icon": "google-chrome/images/img-picker_32.png"
+  },
+
+  "background" : { 
+    "scripts": ["core/js/model.js", "google-chrome/background.js"],
+    "persistent": false
+  },
+  
+  "permissions" : [
+    "activeTab",
+    "tabs",
+    "storage",
+    "downloads",
+    "http://*/*",
+    "https://*/*"
+   ]
+}
