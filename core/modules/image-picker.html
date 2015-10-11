@@ -6,38 +6,39 @@
     </div>
 </nav>
 
-<div class="panel panel-default" ng-if="filterPanelVisible">
-    <div class="panel-body">
-        <div class="btn-toolbar row" ng-repeat="filter in filters">
-            <span class="col-md-1">{{filter.name}}</span>
-            <button class="btn btn-sm btn-link col-md-1" ng-class="{selected:tag.enabled}" type="button" ng-repeat="tag in filter.tags"
-                ng-click="toggleFilterKeyword(filter, tag.keyword)">
-                {{tag.keyword}} <span class="badge">{{tag.matchedCount}}</span>
-            </button>
+<div class="toolbar-panel row" ng-if="filterPanelVisible">
+        <div class="col-md-2" ng-repeat="filter in filters">
+            <div>{{filter.name}}</div>
+            <ul class="toolbar-list-group">
+                <button class="btn btn-link list-group-item" ng-class="{selected:tag.enabled}" type="button" ng-repeat="tag in filter.tags"
+                    ng-click="toggleFilterKeyword(filter, tag.keyword)">
+                    {{tag.keyword}} <span class="badge">{{tag.matchedCount}}</span>
+                </button>
+            </ul>
         </div>
-        
-        <div class="btn-toolbar row" >
-            <span class="col-md-1">Size</span>
-            <div class="col-md-2">
-                <span class="">Width</span>
-                <input type="text" class="sm-control" aria-label="Min" >
-                <span class="">-</span>
-                <input type="text" class="sm-control" aria-label="Max" >
-            </div>
-            <div class="col-md-2">
-                <span class="">Height</span>
-                <input type="text" class="sm-control" aria-label="Min" >
-                <span class="">-</span>
-                <input type="text" class="sm-control" aria-label="Max" >
-            </div>
-            <div class="col-md-2">
-                <span class="">Size</span>
-                <input type="text" class="sm-control" aria-label="Min" >
-                <span class="">-</span>
-                <input type="text" class="sm-control" aria-label="Max" >
-            </div>
+        <div class="col-md-2">
+            <div>Limits</div>
+            <ul class="toolbar-list-group">
+                <button class="btn btn-link list-group-item">
+                    <span class="sm-control-label">Width</span>
+                    <input type="text" class="sm-control" aria-label="Min" >
+                    <span class="">-</span>
+                    <input type="text" class="sm-control" aria-label="Max" >
+                </button>
+                <button class="btn btn-link list-group-item">
+                    <span class="sm-control-label">Height</span>
+                    <input type="text" class="sm-control" aria-label="Min" >
+                    <span class="">-</span>
+                    <input type="text" class="sm-control" aria-label="Max" >
+                </button>
+                <button class="btn btn-link list-group-item">
+                    <span class="sm-control-label">Size</span>
+                    <input type="text" class="sm-control" aria-label="Min" >
+                    <span class="">-</span>
+                    <input type="text" class="sm-control" aria-label="Max" >
+                </button>
+            </ul>
         </div>
-  </div>
 </div>
 
 <div image-grid grid-data="images" grid-setting="settings"></div>

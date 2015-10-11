@@ -95,16 +95,13 @@ button.selected>.badge {
   height: 22px;
   width: 60px;
   padding: 5px 10px;
-  
   vertical-align: middle;
   display: inline-block;
   font-size: 12px;
   line-height: 1.5;
-  
   color: #555;
   background-color: #fff;
   background-image: none;
-  
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
@@ -115,4 +112,28 @@ button.selected>.badge {
   border-color: #66afe9;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.list-group-item {
+  height: 32px;
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 0px solid #ddd;
+}
+
+.toolbar-list-group {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.sm-control-label {
+  width: 60px;
+  display: inline-block;
+}
+
+.toolbar-panel {
+  padding: 5px 15px 2px 15px;
 }
