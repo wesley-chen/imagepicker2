@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top top-bar" role="navigation">
     <div class="container-fluid">
         <div id="navbar">
-            <div class="nav navbar-nav"><a href ng-init="filterPanelVisible = true" ng-click="filterPanelVisible = !filterPanelVisible">Filter</a></div>
+            <div class="nav navbar-nav"><a ng-init="filterPanelVisible = true" ng-click="filterPanelVisible = !filterPanelVisible">Filter</a></div>
         </div>
     </div>
 </nav>
@@ -15,7 +15,29 @@
                 {{tag.keyword}} <span class="badge">{{tag.matchedCount}}</span>
             </button>
         </div>
-    </div>
+        
+        <div class="btn-toolbar row" >
+            <span class="col-md-1">Size</span>
+            <div class="col-md-2">
+                <span class="">Width</span>
+                <input type="text" class="sm-control" aria-label="Min" >
+                <span class="">-</span>
+                <input type="text" class="sm-control" aria-label="Max" >
+            </div>
+            <div class="col-md-2">
+                <span class="">Height</span>
+                <input type="text" class="sm-control" aria-label="Min" >
+                <span class="">-</span>
+                <input type="text" class="sm-control" aria-label="Max" >
+            </div>
+            <div class="col-md-2">
+                <span class="">Size</span>
+                <input type="text" class="sm-control" aria-label="Min" >
+                <span class="">-</span>
+                <input type="text" class="sm-control" aria-label="Max" >
+            </div>
+        </div>
+  </div>
 </div>
 
 <div image-grid grid-data="images" grid-setting="settings"></div>
