@@ -31,7 +31,7 @@
         
         var settings = {
                 "showCaption" : true,
-                "widthMode" : "Small",
+                "widthMode" : "Middle",
                 "webRoot": ""    
         }
         var getSettings = function() {
